@@ -1,0 +1,30 @@
+<h1 class="text-center">London's Best Restaurants</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @restaurants.each do |restaurant| %>
+            <tr>
+              <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+              <td><%= restaurant.address %></td>
+              <td><%= restaurant.phone_number %></td>
+              <td><%= restaurant.category %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= link_to 'Add you favorite London spot to the list', new_restaurant_path %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="text-center">
+  <h1>What Did You Think Of <%= @restaurant.name %> ?</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.input :content, label: false %>
+        <%= f.input :rating %>
+        <%= f.submit "Add a Review", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

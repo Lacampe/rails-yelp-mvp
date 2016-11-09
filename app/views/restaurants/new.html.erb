@@ -1,0 +1,21 @@
+<% content_for(:title) do %>
+  Add Your Favorite Restaurant
+<% end %>
+
+<h1 class="text-center">Add Your Favorite Restaurant</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category %>
+
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
